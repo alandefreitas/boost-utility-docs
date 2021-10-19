@@ -126,8 +126,8 @@
 <p>
         For this purpose, the framework provides two concepts called: InPlaceFactories
         and TypedInPlaceFactories. Helpers to declare these classes are declared
-        in <a href="../../../../include/boost/utility/in_place_factory.hpp" target="_top"><code class="computeroutput"><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">utility</span><span class="special">/</span><span class="identifier">in_place_factory</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span></code></a>
-        and <a href="../../../../include/boost/utility/typed_in_place_factory.hpp" target="_top"><code class="computeroutput"><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">utility</span><span class="special">/</span><span class="identifier">typed_in_place_factory</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span></code></a>.
+        in <a href="../../../../../include/boost/utility/in_place_factory.hpp" target="_top"><code class="computeroutput"><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">utility</span><span class="special">/</span><span class="identifier">in_place_factory</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span></code></a>
+        and <a href="../../../../../include/boost/utility/typed_in_place_factory.hpp" target="_top"><code class="computeroutput"><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">utility</span><span class="special">/</span><span class="identifier">typed_in_place_factory</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span></code></a>.
       </p>
 <p>
         Essentially, these classes hold a sequence of actual parameters and a method
@@ -249,14 +249,15 @@
       </p>
 <p>
         When the container holds a unique non-polymorphic type, such as the case
-        of <a href="../../../../../optional/index.html" target="_top">Boost.Optional</a>, it knows
-        the exact dynamic-type of the contained object and can pass it to the <code class="computeroutput"><span class="identifier">apply</span><span class="special">()</span></code>
+        of <a href="../../../../../../doc/html/optional/index.html" target="_top">Boost.Optional</a>,
+        it knows the exact dynamic-type of the contained object and can pass it to
+        the <code class="computeroutput"><span class="identifier">apply</span><span class="special">()</span></code>
         method of a non-typed factory. In this case, end users can use an <code class="computeroutput"><span class="identifier">in_place_factory</span></code> instance which can be
         constructed without the type of the object to construct.
       </p>
 <p>
         However, if the container holds heterogeneous or polymorphic objects, such
-        as the case of <a href="../../../../../variant/index.html" target="_top">Boost.Variant</a>,
+        as the case of <a href="../../../../../../doc/html/variant/index.html" target="_top">Boost.Variant</a>,
         the dynamic-type of the object to be constructed must be known by the factory.
         In this case, end users must use a <code class="computeroutput"><span class="identifier">typed_in_place_factory</span></code>
         instead.
@@ -284,7 +285,7 @@
 <p>
         Depending on the container class, you can use <code class="computeroutput"><span class="identifier">enable_if</span></code>
         to generate the right overload, or use the following dispatch technique,
-        which is used in the <a href="../../../../../optional/index.html" target="_top">Boost.Optional</a>
+        which is used in the <a href="../../../../../../doc/html/optional/index.html" target="_top">Boost.Optional</a>
         class:
       </p>
 <pre class="programlisting"><span class="keyword">struct</span> <span class="identifier">C</span>
