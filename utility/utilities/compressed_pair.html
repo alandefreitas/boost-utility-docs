@@ -35,7 +35,7 @@
         are defined inside <code class="computeroutput"><span class="keyword">namespace</span> <span class="identifier">boost</span></code>.
       </p>
 <p>
-        The class <a class="link" href="../ref/boost__compressed_pair.html" title="boost::compressed_pair"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> is very similar
+        The class <a class="link" href="../../"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> is very similar
         to <a href="https://en.cppreference.com/w/cpp/utility/pair" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">pair</span></code></a>.
         However, if either of the template arguments are empty classes, then the
         <a href="https://en.cppreference.com/w/cpp/language/ebo" target="_top"><span class="emphasis"><em>empty
@@ -48,17 +48,17 @@
       </h5>
 <pre class="programlisting"><span class="identifier">cpp</span>
 <span class="keyword">template</span> <span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">T1</span><span class="special">,</span> <span class="keyword">class</span> <span class="identifier">T2</span><span class="special">&gt;</span>
-<span class="keyword">class</span> <a class="link" href="../ref/boost__compressed_pair.html" title="boost::compressed_pair"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a>
+<span class="keyword">class</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a>
 <span class="special">{</span>
 <span class="keyword">public</span><span class="special">:</span>
     <span class="keyword">typedef</span> <span class="identifier">T1</span>                                                 <span class="identifier">first_type</span><span class="special">;</span>
     <span class="keyword">typedef</span> <span class="identifier">T2</span>                                                 <span class="identifier">second_type</span><span class="special">;</span>
-    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../ref/boost__call_traits.html" title="boost::call_traits"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">first_type</span><span class="special">&gt;::</span><span class="identifier">param_type</span>       <span class="identifier">first_param_type</span><span class="special">;</span>
-    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../ref/boost__call_traits.html" title="boost::call_traits"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">second_type</span><span class="special">&gt;::</span><span class="identifier">param_type</span>      <span class="identifier">second_param_type</span><span class="special">;</span>
-    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../ref/boost__call_traits.html" title="boost::call_traits"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">first_type</span><span class="special">&gt;::</span><span class="identifier">reference</span>        <span class="identifier">first_reference</span><span class="special">;</span>
-    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../ref/boost__call_traits.html" title="boost::call_traits"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">second_type</span><span class="special">&gt;::</span><span class="identifier">reference</span>       <span class="identifier">second_reference</span><span class="special">;</span>
-    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../ref/boost__call_traits.html" title="boost::call_traits"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">first_type</span><span class="special">&gt;::</span><span class="identifier">const_reference</span>  <span class="identifier">first_const_reference</span><span class="special">;</span>
-    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../ref/boost__call_traits.html" title="boost::call_traits"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">second_type</span><span class="special">&gt;::</span><span class="identifier">const_reference</span> <span class="identifier">second_const_reference</span><span class="special">;</span>
+    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">first_type</span><span class="special">&gt;::</span><span class="identifier">param_type</span>       <span class="identifier">first_param_type</span><span class="special">;</span>
+    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">second_type</span><span class="special">&gt;::</span><span class="identifier">param_type</span>      <span class="identifier">second_param_type</span><span class="special">;</span>
+    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">first_type</span><span class="special">&gt;::</span><span class="identifier">reference</span>        <span class="identifier">first_reference</span><span class="special">;</span>
+    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">second_type</span><span class="special">&gt;::</span><span class="identifier">reference</span>       <span class="identifier">second_reference</span><span class="special">;</span>
+    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">first_type</span><span class="special">&gt;::</span><span class="identifier">const_reference</span>  <span class="identifier">first_const_reference</span><span class="special">;</span>
+    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">call_traits</span></code></a><span class="special">&lt;</span><span class="identifier">second_type</span><span class="special">&gt;::</span><span class="identifier">const_reference</span> <span class="identifier">second_const_reference</span><span class="special">;</span>
 
              <span class="identifier">compressed_pair</span><span class="special">()</span> <span class="special">:</span> <span class="identifier">base</span><span class="special">()</span> <span class="special">{}</span>
              <span class="identifier">compressed_pair</span><span class="special">(</span><span class="identifier">first_param_type</span> <span class="identifier">x</span><span class="special">,</span> <span class="identifier">second_param_type</span> <span class="identifier">y</span><span class="special">);</span>
@@ -80,7 +80,7 @@
         The two members of the pair can be accessed using the member functions <code class="computeroutput"><span class="identifier">first</span><span class="special">()</span></code>
         and <code class="computeroutput"><span class="identifier">second</span><span class="special">()</span></code>.
         Note that not all member functions can be instantiated for all template parameter
-        types. In particular <a class="link" href="../ref/boost__compressed_pair.html" title="boost::compressed_pair"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> can be instantiated
+        types. In particular <a class="link" href="../../"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> can be instantiated
         for reference and array types, however in these cases the range of constructors
         that can be used is limited. If types <code class="computeroutput"><span class="identifier">T1</span></code>
         and <code class="computeroutput"><span class="identifier">T2</span></code> are the same type,
@@ -89,12 +89,12 @@
       </p>
 <p>
         Note that if either member is a <a href="https://en.cppreference.com/w/cpp/named_req/PODType" target="_top">POD</a>
-        type, then that member is not zero-initialized by the <a class="link" href="../ref/boost__compressed_pair.html" title="boost::compressed_pair"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> default constructor:
+        type, then that member is not zero-initialized by the <a class="link" href="../../"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> default constructor:
         it is up to you to supply an initial value for these types if you want them
         to have a default value.
       </p>
 <p>
-        Note that <a class="link" href="../ref/boost__compressed_pair.html" title="boost::compressed_pair"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> can not be instantiated
+        Note that <a class="link" href="../../"><code class="computeroutput"><span class="identifier">compressed_pair</span></code></a> can not be instantiated
         if either of the template arguments is a union type, unless there is compiler
         support for <a href="../../../../../../doc/html/type_traits/index.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">is_union</span></code></a>, or if <a href="../../../../../../doc/html/type_traits/index.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">is_union</span></code></a> is specialised for the
         union type.
