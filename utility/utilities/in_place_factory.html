@@ -249,7 +249,7 @@
       </p>
 <p>
         When the container holds a unique non-polymorphic type, such as the case
-        of <a href="../.././doc/html/optional/index.html" target="_top">Boost.Optional</a>,
+        of <a href="../../../../../../doc/html/optional/index.html" target="_top">Boost.Optional</a>,
         it knows the exact dynamic-type of the contained object and can pass it to
         the <code class="computeroutput"><span class="identifier">apply</span><span class="special">()</span></code>
         method of a non-typed factory. In this case, end users can use an <code class="computeroutput"><span class="identifier">in_place_factory</span></code> instance which can be
@@ -257,7 +257,7 @@
       </p>
 <p>
         However, if the container holds heterogeneous or polymorphic objects, such
-        as the case of <a href="../.././doc/html/variant/index.html" target="_top">Boost.Variant</a>,
+        as the case of <a href="../../../../../../doc/html/variant/index.html" target="_top">Boost.Variant</a>,
         the dynamic-type of the object to be constructed must be known by the factory.
         In this case, end users must use a <code class="computeroutput"><span class="identifier">typed_in_place_factory</span></code>
         instead.
@@ -285,7 +285,7 @@
 <p>
         Depending on the container class, you can use <code class="computeroutput"><span class="identifier">enable_if</span></code>
         to generate the right overload, or use the following dispatch technique,
-        which is used in the <a href="../.././doc/html/optional/index.html" target="_top">Boost.Optional</a>
+        which is used in the <a href="../../../../../../doc/html/optional/index.html" target="_top">Boost.Optional</a>
         class:
       </p>
 <pre class="programlisting"><span class="keyword">struct</span> <span class="identifier">C</span>
