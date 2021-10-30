@@ -182,10 +182,10 @@
       </p>
 <pre class="programlisting"><span class="keyword">namespace</span> <span class="identifier">boost</span> <span class="special">{</span>
 
-<span class="keyword">struct</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">in_place_factory_base</span></code></a> <span class="special">{};</span>
+<span class="keyword">struct</span> <a class="link" href="../index_and_ref/ref/boost__in_place_factory_base.html" title="boost::in_place_factory_base"><code class="computeroutput"><span class="identifier">in_place_factory_base</span></code></a> <span class="special">{};</span>
 
 <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">A0</span><span class="special">&gt;</span>
-<span class="keyword">class</span> <span class="identifier">in_place_factory</span> <span class="special">:</span> <span class="keyword">public</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">in_place_factory_base</span></code></a>
+<span class="keyword">class</span> <span class="identifier">in_place_factory</span> <span class="special">:</span> <span class="keyword">public</span> <a class="link" href="../index_and_ref/ref/boost__in_place_factory_base.html" title="boost::in_place_factory_base"><code class="computeroutput"><span class="identifier">in_place_factory_base</span></code></a>
 <span class="special">{</span>
   <span class="keyword">public</span><span class="special">:</span>
     <span class="identifier">in_place_factory</span> <span class="special">(</span> <span class="identifier">A0</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">a0</span> <span class="special">)</span> <span class="special">:</span> <span class="identifier">m_a0</span><span class="special">(</span><span class="identifier">a0</span><span class="special">)</span> <span class="special">{}</span>
@@ -215,10 +215,10 @@
       </p>
 <pre class="programlisting"><span class="keyword">namespace</span> <span class="identifier">boost</span> <span class="special">{</span>
 
-<span class="keyword">struct</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">typed_in_place_factory_base</span></code></a> <span class="special">{};</span>
+<span class="keyword">struct</span> <a class="link" href="../index_and_ref/ref/boost__typed_in_place_factory_base.html" title="boost::typed_in_place_factory_base"><code class="computeroutput"><span class="identifier">typed_in_place_factory_base</span></code></a> <span class="special">{};</span>
 
 <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">T</span><span class="special">,</span> <span class="keyword">class</span> <span class="identifier">A0</span><span class="special">&gt;</span>
-<span class="keyword">class</span> <span class="identifier">typed_in_place_factory</span> <span class="special">:</span> <span class="keyword">public</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">typed_in_place_factory_base</span></code></a>
+<span class="keyword">class</span> <span class="identifier">typed_in_place_factory</span> <span class="special">:</span> <span class="keyword">public</span> <a class="link" href="../index_and_ref/ref/boost__typed_in_place_factory_base.html" title="boost::typed_in_place_factory_base"><code class="computeroutput"><span class="identifier">typed_in_place_factory_base</span></code></a>
 <span class="special">{</span>
   <span class="keyword">public</span><span class="special">:</span>
     <span class="identifier">typed_in_place_factory</span> <span class="special">(</span> <span class="identifier">A0</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">a0</span> <span class="special">)</span> <span class="special">:</span> <span class="identifier">m_a0</span><span class="special">(</span><span class="identifier">a0</span><span class="special">)</span> <span class="special">{}</span>
@@ -249,7 +249,7 @@
       </p>
 <p>
         When the container holds a unique non-polymorphic type, such as the case
-        of <a href="../../../../../../doc/html/optional/index.html" target="_top">Boost.Optional</a>,
+        of <a href="../.././doc/html/optional/index.html" target="_top">Boost.Optional</a>,
         it knows the exact dynamic-type of the contained object and can pass it to
         the <code class="computeroutput"><span class="identifier">apply</span><span class="special">()</span></code>
         method of a non-typed factory. In this case, end users can use an <code class="computeroutput"><span class="identifier">in_place_factory</span></code> instance which can be
@@ -257,7 +257,7 @@
       </p>
 <p>
         However, if the container holds heterogeneous or polymorphic objects, such
-        as the case of <a href="../../../../../../doc/html/variant/index.html" target="_top">Boost.Variant</a>,
+        as the case of <a href="../.././doc/html/variant/index.html" target="_top">Boost.Variant</a>,
         the dynamic-type of the object to be constructed must be known by the factory.
         In this case, end users must use a <code class="computeroutput"><span class="identifier">typed_in_place_factory</span></code>
         instead.
@@ -285,7 +285,7 @@
 <p>
         Depending on the container class, you can use <code class="computeroutput"><span class="identifier">enable_if</span></code>
         to generate the right overload, or use the following dispatch technique,
-        which is used in the <a href="../../../../../../doc/html/optional/index.html" target="_top">Boost.Optional</a>
+        which is used in the <a href="../.././doc/html/optional/index.html" target="_top">Boost.Optional</a>
         class:
       </p>
 <pre class="programlisting"><span class="keyword">struct</span> <span class="identifier">C</span>
@@ -304,13 +304,13 @@
   <span class="special">~</span><span class="identifier">C</span><span class="special">()</span> <span class="special">{</span> <span class="keyword">delete</span> <span class="identifier">contained_</span> <span class="special">;</span> <span class="special">}</span>
 
   <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">InPlaceFactory</span><span class="special">&gt;</span>
-  <span class="keyword">void</span> <span class="identifier">construct</span> <span class="special">(</span> <span class="identifier">InPlaceFactory</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">aFactory</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><a class="link" href="../../"><code class="computeroutput"><span class="identifier">in_place_factory_base</span></code></a><span class="special">*</span> <span class="special">)</span>
+  <span class="keyword">void</span> <span class="identifier">construct</span> <span class="special">(</span> <span class="identifier">InPlaceFactory</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">aFactory</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><a class="link" href="../index_and_ref/ref/boost__in_place_factory_base.html" title="boost::in_place_factory_base"><code class="computeroutput"><span class="identifier">in_place_factory_base</span></code></a><span class="special">*</span> <span class="special">)</span>
   <span class="special">{</span>
     <span class="identifier">aFactory</span><span class="special">.</span><span class="keyword">template</span> <span class="identifier">apply</span><span class="special">&lt;</span><span class="identifier">X</span><span class="special">&gt;(</span><span class="identifier">contained_</span><span class="special">);</span>
   <span class="special">}</span>
 
   <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">TypedInPlaceFactory</span><span class="special">&gt;</span>
-  <span class="keyword">void</span> <span class="identifier">construct</span> <span class="special">(</span> <span class="identifier">TypedInPlaceFactory</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">aFactory</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><a class="link" href="../../"><code class="computeroutput"><span class="identifier">typed_in_place_factory_base</span></code></a><span class="special">*</span> <span class="special">)</span>
+  <span class="keyword">void</span> <span class="identifier">construct</span> <span class="special">(</span> <span class="identifier">TypedInPlaceFactory</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">aFactory</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><a class="link" href="../index_and_ref/ref/boost__typed_in_place_factory_base.html" title="boost::typed_in_place_factory_base"><code class="computeroutput"><span class="identifier">typed_in_place_factory_base</span></code></a><span class="special">*</span> <span class="special">)</span>
   <span class="special">{</span>
     <span class="identifier">aFactory</span><span class="special">.</span><span class="identifier">apply</span><span class="special">(</span><span class="identifier">contained_</span><span class="special">);</span>
   <span class="special">}</span>

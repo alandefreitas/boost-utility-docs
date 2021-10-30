@@ -31,8 +31,8 @@
         <span class="phrase"><a name="utility.utilities.string_view.introduction"></a></span><a class="link" href="string_view.html#utility.utilities.string_view.introduction">Introduction</a>
       </h5>
 <p>
-        The class <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>
-        and other classes derived from <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> represent references
+        The class <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> and other classes derived
+        from <a class="link" href="../index_and_ref/ref/boost__basic_string_view.html" title="boost::basic_string_view"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> represent references
         to strings or substrings. When you are parsing/processing strings from some
         external source, frequently you want to pass a piece of text to a procedure
         for specialized processing. Before <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string_view</span></code></a>,
@@ -55,25 +55,24 @@
         to return.
       </p>
 <p>
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>
-        is designed to solve these efficiency problems. A <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is a read-only reference
+        <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is designed to solve
+        these efficiency problems. A <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is a read-only reference
         to a contiguous sequence of characters, and provides much of the functionality
         of <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>.
-        A <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>
-        is cheap to create, copy and pass by value, because it does not actually
-        own the storage that it points to.
+        A <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is cheap to create,
+        copy and pass by value, because it does not actually own the storage that
+        it points to.
       </p>
 <p>
-        A <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>
-        is implemented as a small struct that contains a pointer to the start of
-        the character <code class="computeroutput"><span class="identifier">data</span></code> and a
-        <code class="computeroutput"><span class="identifier">count</span></code>. A <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is cheap to create and
+        A <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is implemented as a
+        small struct that contains a pointer to the start of the character <code class="computeroutput"><span class="identifier">data</span></code> and a <code class="computeroutput"><span class="identifier">count</span></code>.
+        A <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> is cheap to create and
         cheap to copy.
       </p>
 <p>
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>
-        acts as a container; it includes all the methods that you would expect in
-        a container, including iteration support, <code class="computeroutput"><span class="keyword">operator</span><span class="special">[]</span></code>, <code class="computeroutput"><span class="identifier">at</span></code>
+        <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> acts as a container;
+        it includes all the methods that you would expect in a container, including
+        iteration support, <code class="computeroutput"><span class="keyword">operator</span><span class="special">[]</span></code>, <code class="computeroutput"><span class="identifier">at</span></code>
         and <code class="computeroutput"><span class="identifier">size</span></code>. It can be used
         with any of the iterator-based algorithms in the STL - as long as you do
         not need to change the underlying data. For example, <a href="https://en.cppreference.com/w/cpp/algorithm/sort" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">sort</span></code></a>
@@ -81,14 +80,14 @@
         will not work.
       </p>
 <p>
-        Besides generic container functionality, <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> provides a subset of
+        Besides generic container functionality, <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> provides a subset of
         the interface of <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>.
         This makes it easy to replace parameters of type <code class="computeroutput"><span class="keyword">const</span>
         <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>
-        <span class="special">&amp;</span></code> with <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>. Like <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>,
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>
-        has a static member variable named <code class="computeroutput"><span class="identifier">npos</span></code>
-        to denote the result of failed searches, and to mean "the end".
+        <span class="special">&amp;</span></code> with <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>. Like <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>,
+        <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> has a static member
+        variable named <code class="computeroutput"><span class="identifier">npos</span></code> to denote
+        the result of failed searches, and to mean "the end".
       </p>
 <div class="caution"><table border="0" summary="Caution">
 <tr>
@@ -96,10 +95,10 @@
 <th align="left">Caution</th>
 </tr>
 <tr><td align="left" valign="top"><p>
-          Because a <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> does not own the data
+          Because a <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> does not own the data
           that it refers to, it introduces lifetime issues into code that uses it.
-          The programmer must ensure that the data that a <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a> refers to exists as
-          long as the <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a> does.
+          The programmer must ensure that the data that a <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> refers to exists as
+          long as the <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> does.
         </p></td></tr>
 </table></div>
 <div class="note"><table border="0" summary="Note">
@@ -109,35 +108,35 @@
 </tr>
 <tr><td align="left" valign="top">
 <p>
-          Boost.Utility also includes the class <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_ref</span></code></a>:
+          Boost.Utility also includes the class <a class="link" href="../index_and_ref/ref/boost__string_ref.html" title="boost::string_ref"><code class="computeroutput"><span class="identifier">string_ref</span></code></a>:
         </p>
 <p>
-          - <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_ref</span></code></a>
-          is the initial implementation of Jeffrey Yaskin's <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3442.html" target="_top">N3442:
+          - <a class="link" href="../index_and_ref/ref/boost__string_ref.html" title="boost::string_ref"><code class="computeroutput"><span class="identifier">string_ref</span></code></a> is the initial implementation
+          of Jeffrey Yaskin's <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3442.html" target="_top">N3442:
           string_ref: a non-owning reference to a string</a>.
         </p>
 <p>
-          - <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a>
-          is an updated implementation to reflect the Library Fundamentals TS <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4480.html" target="_top">N4480:
+          - <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> is an updated implementation
+          to reflect the Library Fundamentals TS <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4480.html" target="_top">N4480:
           [string.view]</a>
         </p>
 <p>
-          Please prefer <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a> / <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> over <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_ref</span></code></a> / <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_ref</span></code></a>:
+          Please prefer <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> / <a class="link" href="../index_and_ref/ref/boost__basic_string_view.html" title="boost::basic_string_view"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> over <a class="link" href="../index_and_ref/ref/boost__string_ref.html" title="boost::string_ref"><code class="computeroutput"><span class="identifier">string_ref</span></code></a> / <a class="link" href="../index_and_ref/ref/boost__basic_string_ref.html" title="boost::basic_string_ref"><code class="computeroutput"><span class="identifier">basic_string_ref</span></code></a>:
         </p>
 <p>
-          - The <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> class better
+          - The <a class="link" href="../index_and_ref/ref/boost__basic_string_view.html" title="boost::basic_string_view"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> class better
           matches <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">basic_string_view</span></code></a>
         </p>
 <p>
-          - <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a>
-          has WAY more constexpr support.
+          - <a class="link" href="../index_and_ref/ref/boost__basic_string_view.html" title="boost::basic_string_view"><code class="computeroutput"><span class="identifier">basic_string_view</span></code></a> has WAY more
+          constexpr support.
         </p>
 <p>
-          - Code that uses <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_ref</span></code></a> should continue
+          - Code that uses <a class="link" href="../index_and_ref/ref/boost__basic_string_ref.html" title="boost::basic_string_ref"><code class="computeroutput"><span class="identifier">basic_string_ref</span></code></a> should continue
           to work.
         </p>
 <p>
-          - No much code depends on <a class="link" href="../../"><code class="computeroutput"><span class="identifier">basic_string_ref</span></code></a> anymore
+          - No much code depends on <a class="link" href="../index_and_ref/ref/boost__basic_string_ref.html" title="boost::basic_string_ref"><code class="computeroutput"><span class="identifier">basic_string_ref</span></code></a> anymore
         </p>
 </td></tr>
 </table></div>
@@ -146,11 +145,11 @@
         <span class="phrase"><a name="utility.utilities.string_view.examples"></a></span><a class="link" href="string_view.html#utility.utilities.string_view.examples">Examples</a>
       </h5>
 <p>
-        Integrating <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a> into your code is fairly
+        Integrating <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> into your code is fairly
         simple. Wherever you pass a <code class="computeroutput"><span class="keyword">const</span>
         <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>
         <span class="special">&amp;</span></code> or <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a>
-        as a parameter, that's a candidate for passing a <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>.
+        as a parameter, that's a candidate for passing a <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a>.
       </p>
 <pre class="programlisting"><a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a> <span class="identifier">extract_part</span> <span class="special">(</span> <span class="keyword">const</span> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_top"><code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code></a> <span class="special">&amp;</span><span class="identifier">bar</span> <span class="special">)</span> <span class="special">{</span>
     <span class="keyword">return</span> <span class="identifier">bar</span><span class="special">.</span><span class="identifier">substr</span> <span class="special">(</span> <span class="number">2</span><span class="special">,</span> <span class="number">3</span> <span class="special">);</span>
@@ -185,9 +184,9 @@
         and deallocations, and the associated copying of data.
       </p>
 <p>
-        Now let's look at the same code with <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a>:
+        Now let's look at the same code with <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a>:
       </p>
-<pre class="programlisting"><a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> <span class="identifier">extract_part</span> <span class="special">(</span> <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> <span class="identifier">bar</span> <span class="special">)</span> <span class="special">{</span>
+<pre class="programlisting"><a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> <span class="identifier">extract_part</span> <span class="special">(</span> <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">string_view</span></code></a> <span class="identifier">bar</span> <span class="special">)</span> <span class="special">{</span>
     <span class="keyword">return</span> <span class="identifier">bar</span><span class="special">.</span><span class="identifier">substr</span> <span class="special">(</span> <span class="number">2</span><span class="special">,</span> <span class="number">3</span> <span class="special">);</span>
 <span class="special">}</span>
 
@@ -195,9 +194,9 @@
 </pre>
 <p>
         No memory allocations. No copying of character data. No changes to the code
-        other than the types. There are two <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a> s created, and two
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a>
-        s copied, but those are cheap operations.
+        other than the types. There are two <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> s created, and two
+        <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> s copied, but those
+        are cheap operations.
       </p>
 <h5>
 <a name="utility.utilities.string_view.h2"></a>
@@ -206,12 +205,8 @@
       </h5>
 <p>
         The header file <a href="../../../../../include/boost/utility/string_view.hpp" target="_top"><code class="computeroutput"><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">utility</span><span class="special">/</span><span class="identifier">string_view</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span></code></a>
-        defines a template <a class="link" href="../../"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">basic_string_view</span></code></a>, and four specializations
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a>,
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">wstring_view</span></code></a>,
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">u16string_view</span></code></a>,
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">u32string_view</span></code></a>
-        - for <code class="computeroutput"><span class="keyword">char</span></code> / <code class="computeroutput"><span class="keyword">wchar_t</span></code>
+        defines a template <a class="link" href="../index_and_ref/ref/boost__basic_string_view.html" title="boost::basic_string_view"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">basic_string_view</span></code></a>, and four specializations
+        <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a>, <a class="link" href="../index_and_ref/ref/boost__wstring_view.html" title="boost::wstring_view"><code class="computeroutput"><span class="identifier">wstring_view</span></code></a>, <a class="link" href="../index_and_ref/ref/boost__u16string_view.html" title="boost::u16string_view"><code class="computeroutput"><span class="identifier">u16string_view</span></code></a>, <a class="link" href="../index_and_ref/ref/boost__u32string_view.html" title="boost::u32string_view"><code class="computeroutput"><span class="identifier">u32string_view</span></code></a> - for <code class="computeroutput"><span class="keyword">char</span></code> / <code class="computeroutput"><span class="keyword">wchar_t</span></code>
         / <code class="computeroutput"><span class="keyword">char16_t</span></code> / <code class="computeroutput"><span class="keyword">char32_t</span></code>.
       </p>
 <p>
@@ -229,10 +224,9 @@
 <span class="identifier">basic_string_view</span><span class="special">&amp;</span> <span class="keyword">operator</span><span class="special">=(</span><span class="keyword">const</span> <span class="identifier">basic_string_view</span> <span class="special">&amp;</span><span class="identifier">rhs</span><span class="special">);</span>
 </pre>
 <p>
-        <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a>
-        does not define a move constructor nor a move-assignment operator because
-        copying a <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a>
-        is just a cheap as moving one.
+        <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> does not define a move
+        constructor nor a move-assignment operator because copying a <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> is just a cheap as moving
+        one.
       </p>
 <p>
         Basic container-like functions:
@@ -262,7 +256,7 @@
 <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="identifier">charT</span><span class="special">*</span> <span class="identifier">data</span><span class="special">()</span>  <span class="keyword">const</span> <span class="special">;</span>
 </pre>
 <p>
-        Modifying the <a class="link" href="../../"><code class="computeroutput"><span class="identifier">string_view</span></code></a> (but not the underlying
+        Modifying the <a class="link" href="../index_and_ref/ref/boost__string_view.html" title="boost::string_view"><code class="computeroutput"><span class="identifier">string_view</span></code></a> (but not the underlying
         data):
       </p>
 <pre class="programlisting"><span class="keyword">void</span> <span class="identifier">clear</span><span class="special">();</span>
